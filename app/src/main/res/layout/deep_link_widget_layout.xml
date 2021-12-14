@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/main_title"/>
+    <Button
+        android:id="@+id/widget_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/item_margin_vertical_10"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@color/white"
+        android:text="@string/sign_up" />
+    <Button
+        android:id="@+id/widget_forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/item_margin_vertical_10"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@color/white"
+        android:text="@string/title_forget_password" />
+</LinearLayout>

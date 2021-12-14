@@ -1,0 +1,28 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="signup_action"
+        android:enabled="true"
+        android:icon="@drawable/ic_sing_up"
+        android:shortcutShortLabel="@string/sign_up"
+        android:shortcutLongLabel="@string/sign_up"
+        android:shortcutDisabledMessage="@string/sign_up">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.kseyko.navigationdeeplinkwidgetsample"
+            android:targetClass="com.kseyko.navigationdeeplinkwidgetsample.MainActivity"
+            android:data="signupfragment://signup"/>
+    </shortcut>
+
+<!--    <shortcut-->
+<!--        android:shortcutId="forget_password_action"-->
+<!--        android:icon="@drawable/ic_forget_password"-->
+<!--        android:shortcutShortLabel="@string/title_forget_password">-->
+<!--        <intent-->
+<!--            android:identifier=""-->
+<!--            android:action="android.intent.action.VIEW"-->
+<!--            android:targetPackage="com.kseyko.navigationdeeplinkwidgetsample"-->
+<!--            android:targetClass="com.kseyko.navigationdeeplinkwidgetsample.MainActivity"-->
+<!--            android:data="forgetPasswordFragment://forgetPassword"/>-->
+<!--    </shortcut>-->
+</shortcuts>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.kseyko.navigationdeeplinkwidgetsample.LoginFragment"
+        android:label="@string/login_page"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_navigation_home_to_welcomeFragment"
+            app:destination="@id/navigation_welcome"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_sign_up"
+        android:name="com.kseyko.navigationdeeplinkwidgetsample.SignUpFragment"
+        android:label="@string/sign_up_page"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_navigation_sign_up_to_navigation_home"
+            app:popUpTo="@id/navigation_home" />
+        <deepLink app:uri="signupfragment://signup" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_forget_password"
+        android:name="com.kseyko.navigationdeeplinkwidgetsample.ForgetPasswordFragment"
+        android:label="@string/title_forget_password"
+        tools:layout="@layout/fragment_forget_password">
+        <argument
+            android:name="forgetpassword"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink app:uri="forgetPasswordFragment://forgetPassword" />
+        <argument
+            android:name="passKey"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_navigation_forget_password_to_navigation_home"
+            app:popUpTo="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_welcome"
+        android:name="com.kseyko.navigationdeeplinkwidgetsample.WelcomeFragment"
+        android:label="@string/welcome"
+        tools:layout="@layout/welcome_fragment">
+        <argument
+            android:name="userName"
+            android:defaultValue="unknown user"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.kseyko.navigationdeeplinkwidgetsample.Settings"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings"></fragment>
+
+</navigation>
